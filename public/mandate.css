@@ -1,0 +1,29 @@
+body {
+  background-color:white;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color:white;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}

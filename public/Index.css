@@ -1,0 +1,173 @@
+/* Base styles for the navigation bar */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.nav .logo {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.nav .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+.nav .nav-links li {
+    position: relative; /* Required for dropdown positioning */
+    margin: 0 15px;
+}
+
+.nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.nav .search-icon,
+.nav .navOpen,
+.nav .navClose {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+}
+
+.nav .search-box {
+    display: none;
+    position: absolute;
+    right: 150px;
+    top: 15px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    max-width: 300px;
+}
+
+.nav .search-box input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+/* Dropdown styles */
+.nav .dropdown {
+    position: relative;
+}
+
+.nav .dropdown-content,
+.nav .nested-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nav .dropdown-content a,
+.nav .nested-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav .dropdown-content a:hover,
+.nav .nested-dropdown-content a:hover {
+    background-color: gray;
+}
+
+.nav .dropdown:hover .dropdown-content,
+.nav .nested-dropdown:hover .nested-dropdown-content {
+    display: block;
+}
+
+.nav .nested-dropdown-content {
+    left: 100%;
+    top: 0;
+    background-color: black;
+    color: white; /* Make text visible against the black background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.nested-dropdown-icon {
+    float: right;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1160px) {
+    .nav {
+        padding: 15px 100px;
+    }
+    .nav .search-box {
+        right: 150px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .nav {
+        padding: 15px 50px;
+    }
+    .nav .search-box {
+        right: 100px;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        padding: 15px 50px;
+        flex-wrap: wrap;
+    }
+    .nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .nav .navOpen,
+    .nav .navClose {
+        display: block;
+    }
+    .nav .navClose {
+        display: none;
+    }
+    .nav .search-box {
+        right: 50px;
+    }
+}
+
+/* Style for search icon and box */
+.search-box {
+    display: none;
+    position: relative;
+}
+
+.search-box input {
+    width: 200px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Show the search box when the search icon is clicked */
+.show .search-box {
+    display: block;
+}

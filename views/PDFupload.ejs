@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+</head>
+<body>
+    <h1>Submit Form</h1>
+    <form action="/pdfupload/submit-form" method="POST" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="pdf">Upload PDF:</label>
+        <input type="file" id="pdf" name="pdf" accept="application/pdf" required><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/pdfupload/data">View Submitted Data</a>
+</body>
+</html>

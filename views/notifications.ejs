@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NTRO Training Programs</title>
+    <link rel="stylesheet" href="training.css">
+    <style>
+      * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #00698f;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #00698f;
+}
+
+a:hover {
+    color: #00467f;
+}
+
+/* Header Styles */
+
+
+
+header {
+    background-color: #00698f;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    width: 200px;
+    float:center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.login-button:hover {
+    background-color: #45a049;
+}
+.navbar .links {
+    display: flex;
+}
+
+/*main */
+
+
+.horizontal-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.alert {
+    background-color: #ff69b4;
+    padding: 10px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.training-description {
+    width: 40%;
+    padding: 20px;
+}
+
+.testimonials {
+    width: 30%;
+    padding: 20px;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.photos img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+.contact {
+    padding: 20px;
+}
+
+.contact h2 {
+    margin-top: 0;
+}
+
+/* Photos Styles */
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photos img {
+    width: 200px; /* fixed width for all photos */
+    height: 150px; /* fixed height for all photos */
+    margin: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Contact Styles */
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact p {
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #00698f;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+    </style> 
+</head>
+<body>
+    <header>
+        <h1>NTRO</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trainings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="horizontal-section">
+            <div class="alert">
+                <h2>Alert: Upcoming Training Updates</h2>
+                <div class="notifications-container">
+                    <marquee behavior="scroll" direction="up"
+                    <% notifications.forEach(notification => { %>
+                      <div class="notification-box">
+                            <a class="notification-title" href="<%= notification.pdfPath %>" target="_blank"><%= notification.title %></a>
+                        </div>
+                    <% }); %></marquee>
+                </div>
+            </div>
+            <div class="training-description">
+                <h2>Description</h2>
+                <p>Brief description of training program.</p>
+                <div class="training-types">
+                    <h2>Types of Trainings</h2>
+                    <ul>
+                        <li>Training 1</li>
+                        <li>Training 2</li>
+                        <li>Training 3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="testimonials">
+                <h2>Testimonials</h2>
+                <div class="testimonial">
+                    <p>"Amazing training program! Highly recommend it!"</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Learned so much from this course. Great instructors!"</p>
+                </div>
+            </div>
+        </section>
+        <section class="photos">
+            <h2>Photos</h2>
+            <img src="./image/photo1.jpg" alt="Training Session 1">
+            <img src="./image/photo2.jpg" alt="Training Session 2">
+            <img src="./image/photo3.jpg" alt="Training Session 3">
+        </section>
+        <footer class="footer">
+            <section class="contact">
+                <h2>Contact Us</h2>
+                <p>Phone: 5599451589</p>
+                <p>Email: <a href="mailto:info@ntr-o.com">info@ntro.com</a></p>
+            </section>
+        </footer>
+    </main>
+    <footer>
+        <p>&copy; 2023 NTRO. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

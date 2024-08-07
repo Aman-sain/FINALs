@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted Successfully</title>
+</head>
+<body>
+    <h1>Form Submitted Successfully</h1>
+    <p>Name: <%= formData.name %></p>
+    <p>Email: <%= formData.email %></p>
+    <p>PDF Path: <a href="/<%= formData.pdfPath %>">Download PDF</a></p>
+    <a href="/pdfupload/data">View Submitted Data</a>
+</body>
+</html>

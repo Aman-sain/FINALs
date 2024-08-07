@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar</title>
+    <link rel="stylesheet" href="Index.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+    <style>
+        .nav {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav li {
+            margin-right: 20px;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px; /* Add margin to separate content from program overview */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <i class="uil uil-bars navOpen" aria-label="Open Navigation Menu"></i>
+            <div id="logo"></div>
+            <a href="#" class="logo">hello</a>
+            <a href="/admin"><button class="login-button">Login</button></a>
+
+            <ul class="nav-links">
+                <!-- <i class="uil uil-times navClose" aria-label="Close Navigation Menu"></i> -->
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">CTTI</a>
+                    <div class="dropdown-content">
+                        <div class="nested-dropdown">
+                            <a href="#" class="dropbtn">Training<i class="uil uil-angle-right "></i></a>
+                            <div class="nested-dropdown-content">
+                                <a href="notificationrouter/notifications">Training</a>
+                                <a href="/institute">Institute</a>
+                                <a href="#">Faculty</a>
+                            </div>
+                        </div>
+                        <div class="nested-dropdown">
+                            <a href="#" class="dropbtn">Capacity and devlopment<i class="uil uil-angle-right "></i></a>
+                            <div class="nested-dropdown-content">
+                                <a href="/Pdfrouter/data">MoU</a>
+                                <a href="#">Higher education</a>
+                                <a href="#">Internship</a>
+                            </div>
+                        </div>
+                        <a href="./file.html">Library</a>
+                        <a href="#">About us</a>
+                    </div>
+                </li>
+                <li><a href="#">Division 1</a></li>
+                <li><a href="#">Division 2</a></li>
+                
+            </ul>
+            
+            <i class="uil uil-search search-icon" id="searchIcon" aria-label="Open Search Box"></i>
+            <div class="search-box">
+                <i class="uil uil-search search-icon"></i>
+                <input type="text" placeholder="Search here..." aria-label="Search here..." />
+            </div>
+        </nav>
+    </header>
+    <script src="navbar.js" defer></script>
+</body>
+</html>
